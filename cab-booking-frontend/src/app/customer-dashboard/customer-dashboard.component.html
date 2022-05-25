@@ -1,0 +1,33 @@
+<div class="w3-top">
+    <div class="w3-bar=block w3-green w3-wide w3-padding w3-card">
+      <div class="w3-center">
+        <a routerLink="/home" class="w3-bar-item w3-button w3-hover-red">Home</a>
+        <a routerLink="/bookCab" class="w3-bar-item w3-button w3-hover-red">Book a Cab</a>
+        <a [routerLink]="['/updateCustomer']" [queryParams]="{custId: custId }" class="w3-bar-item w3-button w3-hover-red">Update Profile</a>
+        <!--<a (click)="logout()" class="w3-bar-item w3-button">Logout</a>-->
+      </div>
+    </div>
+
+    <h3 class="w3-center">My Profile</h3>
+    <table class="w3-table w3-striped w3-border">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Mobile Number</th>
+              <th>Email</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>{{customer.customerId}}</td>
+              <td>{{customer.username}}</td>
+              <td>{{customer.password}}</td>
+              <td>{{customer.mobileNumber}}</td>
+              <td>{{customer.email}}</td>
+          </tr>
+      </tbody>
+  </table>
+
+  </div>
